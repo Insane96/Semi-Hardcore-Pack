@@ -186,7 +186,7 @@
 		"Equip Wooden Pick" = true
 		#The maximum Y coordinate at which Zombies can mine.
 		#Range: -128 ~ 512
-		"Max Y Dig" = 512
+		"Max Y Dig" = 64
 		#Multiplier for digger zombies mining speed. E.g. with this set to 2, zombies will take twice the time to mine a block.
 		#Range: 0.0 ~ 128.0
 		"Digger Speed Multiplier" = 2
