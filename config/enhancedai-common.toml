@@ -44,7 +44,7 @@
 
 		#Entities in here will not have the TargetAI changed
 		[Base.Targeting."Entity Blacklist"]
-			Blacklist = ["minecraft:enderman", "minecraft:piglin", "minecraft:piglin_brute"]
+			Blacklist = ["minecraft:enderman", "minecraft:piglin", "minecraft:piglin_brute", "progressivebosses:larva"]
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
