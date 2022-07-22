@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "shieldsplus:wooden_shield"
+        },
+        "title": {
+            "text": "Some protection"
+        },
+        "description": {
+            "text": "More shield types exist. A wooden one reduces damage taken by 1, the vanilla one by 5"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:getting_wood",
+    "criteria": {
+        "wooden_shield": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "shieldsplus:wooden_shield"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "wooden_shield"
+        ]
+    ]
+}
