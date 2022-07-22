@@ -33,7 +33,7 @@
 		#Range: > 0
 		"Starting Difficulty" = 4
 		#Set to false to disable the first Wither summoned message.
-		"Show First Summoned Wither Message" = true
+		"Show First Summoned Wither Message" = false
 		#Entities that extend the vanilla Wither but shouldn't be taken into account by the mod (e.g. Botania's Pink Wither).
 		"Entity Blacklist" = ["botania:pink_wither"]
 
@@ -215,7 +215,7 @@
 		#Range: > 0
 		"Starting Difficulty" = 4
 		#Set to false to disable the first Dragon killed message.
-		"Show First Killed Dragon Message" = true
+		"Show First Killed Dragon Message" = false
 
 	#Bonus Health and Bonus regeneration.
 	[Dragon.Health]
