@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "fiow:flint_axe"
+        },
+        "title": {
+            "text": "Your first axe"
+        },
+        "description": {
+            "text": "You can't punch trees. Obtain flint from gravel or crafting and sticks from leaves and get a flint hatchet"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:root",
+    "criteria": {
+        "flint_axe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "fiow:flint_axe"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "flint_axe"
+        ]
+    ]
+}

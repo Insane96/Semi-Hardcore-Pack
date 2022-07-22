@@ -1,0 +1,40 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:oak_log"
+        },
+        "title": {
+            "text": "Getting wood"
+        },
+        "description": {
+            "text": "You can now start Tinkers' construct. Check the book."
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:flint_axe",
+    "criteria": {
+        "log": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "minecraft:logs"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "log"
+        ]
+    ],
+    "rewards": {
+      "loot": [
+        "tconstruct:gameplay/starting_book"
+      ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:end_portal_frame"
+        },
+        "title": {
+            "text": "The End?"
+        },
+        "description": {
+            "text": "Get into The End. Gain one life."
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:nether",
+    "criteria": {
+        "entered_end": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "to": "minecraft:the_end"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "entered_end"
+        ]
+    ],
+    "rewards": {
+      "function": "semihardcore:gain_life"
+    }
+}

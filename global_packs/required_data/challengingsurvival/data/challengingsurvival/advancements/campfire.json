@@ -1,0 +1,38 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:campfire"
+        },
+        "title": {
+            "text": "Crude Furnace"
+        },
+        "description": {
+            "text": "A Furnace requires a few more ingredients to craft, in the meantime a Campfire will do."
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:getting_wood",
+    "criteria": {
+        "campfire": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:campfire"
+            }
+        },
+        "soul_campfire": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:soul_campfire"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "campfire",
+            "soul_campfire"
+        ]
+    ]
+}

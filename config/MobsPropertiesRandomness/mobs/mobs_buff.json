@@ -1,0 +1,38 @@
+{
+    "group": "hostiles",
+    "attributes": [
+        {
+            "id": "minecraft:generic.max_health",
+            "modifier_name": "More Health for Hostiles",
+            "amount": {
+                "min": 8,
+                "difficulty_modifier": {
+                    "operation": "add",
+                    "easy": -4,
+                    "normal": -2
+                },
+                "time_existed_modifier": {
+                    "bonus_percentage": 0.25,
+                    "seconds": 3600,
+                    "max_bonus_percentage": 1.5
+                }
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.movement_speed",
+            "modifier_name": "More Speed for Hostiles",
+            "amount": {
+                "min": 0.05,
+                "max": 0.20,
+                "difficulty_modifier": {
+                    "operation": "add",
+                    "easy": -0.10,
+                    "normal": -0.05,
+                    "affects_max_only": true
+                }
+            },
+            "operation": "multiply_base"
+        }
+    ]
+}

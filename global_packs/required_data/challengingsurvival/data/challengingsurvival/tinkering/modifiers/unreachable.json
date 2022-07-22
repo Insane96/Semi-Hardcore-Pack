@@ -1,0 +1,19 @@
+{
+    "type": "tconstruct:stat_boost",
+    "level_display": "tconstruct:default",
+    "attributes": [
+      {
+        "unique": "tconstruct.modifier.range",
+        "attribute": "forge:attack_range",
+        "operation": "addition",
+        "amount": -0.5,
+        "slots": [
+          "mainhand",
+          "feet",
+          "legs",
+          "chest",
+          "head"
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,31 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:furnace"
+        },
+        "title": {
+            "text": "A real Furnace"
+        },
+        "description": {
+            "text": "Now you should really start making Grout to get a Melter and actually get some metals from these raw ores instead of nuggets."
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:campfire",
+    "criteria": {
+        "furnace": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:furnace"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "furnace"
+        ]
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "mob_id": "minecraft:spider",
+    "on_hit_effects": {
+        "on_attack": [{
+            "target": "other",
+            "damage_type": "direct",
+            "potion_effects": [
+                {
+                    "id": "minecraft:slowness",
+                    "amplifier": 0,
+                    "duration": {
+                        "min": 5,
+                        "difficulty_modifier": {
+                            "operation": "add",
+                            "easy": -2,
+                            "normal": -1
+                        }
+                    }
+                }
+            ]
+        }]
+    },
+    "attributes": [
+        {
+            "id": "minecraft:generic.movement_speed",
+            "modifier_name": "More Speed for Spiders",
+            "amount": 0.05,
+            "operation": "multiply_base"
+        }
+    ]
+}

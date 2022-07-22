@@ -1,0 +1,10 @@
+{
+    "mob_id": "minecraft:creeper",
+    "custom_name": {
+        "prefixes": [ "Walking " ]
+    },
+    "conditions": {
+        "nbt": "{ForgeData:{\"enhancedai:walking_fuse\": 1b}}",
+        "advancements_done": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "fiow:remove_wooden_tools",
+  "conditions": [
+      {
+          "type": "forge:false"
+      }
+  ]
+}

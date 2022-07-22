@@ -1,0 +1,17 @@
+
+[Semi-Hardcore]
+	"Enable Lives" = true
+	"Enable Health" = true
+
+	[Semi-Hardcore.Lives]
+		#How many lives players spawns with
+		#Range: > 0
+		"Starting Lives" = 3
+
+	[Semi-Hardcore.Health]
+		#Players starting Health
+		#Range: > 1
+		"Starting Health" = 20
+		#Half hearts lost when the player dies. Negative numbers can be used to give health to players.
+		"Half hearts penalty on death" = 0
+

@@ -1,0 +1,16 @@
+{
+  "type": "fiow:bonus_stick",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:player"
+      }
+    }
+  ],
+  "chance": 0.15,
+  "leaves": "minecraft:leaves",
+  "stick": "minecraft:stick",
+  "count": 1
+}

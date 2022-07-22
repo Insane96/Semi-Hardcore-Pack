@@ -3,3 +3,11 @@ logs/
 resourcepacks/
 saves/
 screenshots/
+options.txt
+realms_persistence.json
+servers.dat
+servers.dat_old
+supportercache.json
+usercache.json
+usernamecache.json
+.curseclient

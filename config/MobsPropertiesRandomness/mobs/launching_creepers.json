@@ -1,0 +1,10 @@
+{
+    "mob_id": "minecraft:creeper",
+    "custom_name": {
+        "prefixes": [ "Launching " ]
+    },
+    "conditions": {
+        "nbt": "{ForgeData:{\"enhancedai:launch\": 1b}}",
+        "advancements_done": []
+    }
+}

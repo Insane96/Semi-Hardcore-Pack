@@ -1,0 +1,10 @@
+{
+    "mob_id": "minecraft:creeper",
+    "custom_name": {
+        "prefixes": [ "Breaching " ]
+    },
+    "conditions": {
+        "nbt": "{ForgeData:{\"enhancedai:breach\": 1b}}",
+        "advancements_done": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "fiow:bonus_flint",
+  "conditions": [
+      {
+          "type": "forge:false"
+      }
+  ]
+}
