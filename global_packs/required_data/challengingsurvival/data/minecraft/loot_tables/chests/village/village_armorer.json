@@ -43,7 +43,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_helmet"
+          "name": "tconstruct:travelers_helmet"
         },
         {
           "type": "minecraft:item",

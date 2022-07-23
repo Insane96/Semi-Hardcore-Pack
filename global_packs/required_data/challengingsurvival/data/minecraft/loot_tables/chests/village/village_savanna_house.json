@@ -118,8 +118,14 @@
           "name": "minecraft:torch"
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:bucket"
+            "type": "minecraft:item",
+            "name": "ceramicbucket:ceramic_bucket",
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{Fluid: {FluidName: \"minecraft:water\", Amount: 1000}}"
+                }
+            ]
         }
       ]
     }

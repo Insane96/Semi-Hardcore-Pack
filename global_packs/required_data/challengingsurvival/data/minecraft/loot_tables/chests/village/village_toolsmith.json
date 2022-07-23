@@ -73,11 +73,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:iron_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -110,7 +105,35 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:iron_shovel"
+          "name": "tconstruct:pick_head",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:copper\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "tconstruct:round_plate",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:copper\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "tconstruct:small_axe_head",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:copper\"}"
+            }
+          ]
         }
       ]
     }

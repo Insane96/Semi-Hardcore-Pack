@@ -92,32 +92,33 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:iron_pickaxe"
+          "name": "tconstruct:small_blade",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:iron\"}"
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:iron_sword"
+          "weight": 4,
+          "name": "tconstruct:travelers_helmet"
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:iron_chestplate"
+          "weight": 4,
+          "name": "tconstruct:travelers_chestplate"
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:iron_helmet"
+          "weight": 4,
+          "name": "tconstruct:travelers_leggings"
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:iron_leggings"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:iron_boots"
+          "weight": 4,
+          "name": "tconstruct:travelers_boots"
         },
         {
           "type": "minecraft:item",
