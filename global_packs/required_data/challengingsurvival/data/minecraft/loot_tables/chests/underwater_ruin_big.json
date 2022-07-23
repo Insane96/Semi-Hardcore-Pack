@@ -76,7 +76,19 @@
           "weight": 5,
           "functions": [
             {
-              "function": "minecraft:enchant_randomly"
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                  "minecraft:flame",
+                  "minecraft:infinity",
+                  "minecraft:luck_of_the_sea",
+                  "minecraft:lure",
+                  "minecraft:multishot",
+                  "minecraft:piercing",
+                  "minecraft:power",
+                  "minecraft:punch",
+                  "minecraft:quick_charge",
+                  "minecraft:unbreaking"
+              ]
             }
           ],
           "name": "minecraft:book"

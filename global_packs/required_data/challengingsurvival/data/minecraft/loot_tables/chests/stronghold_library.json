@@ -54,9 +54,19 @@
           "weight": 10,
           "functions": [
             {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 30.0,
-              "treasure": true
+              "function": "minecraft:enchant_randomly",
+              "enchantments": [
+                  "minecraft:flame",
+                  "minecraft:infinity",
+                  "minecraft:luck_of_the_sea",
+                  "minecraft:lure",
+                  "minecraft:multishot",
+                  "minecraft:piercing",
+                  "minecraft:power",
+                  "minecraft:punch",
+                  "minecraft:quick_charge",
+                  "minecraft:unbreaking"
+              ]
             }
           ],
           "name": "minecraft:book"
