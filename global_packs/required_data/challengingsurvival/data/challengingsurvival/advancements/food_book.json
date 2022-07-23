@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "solcarrot:food_book"
+        },
+        "title": {
+            "text": "Varied Eating"
+        },
+        "description": {
+            "text": "Eating different kinds of food will make you get bonus health up to 10 hearts. Check the Food Book for more infos."
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:campfire",
+    "criteria": {
+        "food_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "solcarrot:food_book"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "food_book"
+        ]
+    ]
+}

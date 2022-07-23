@@ -7,7 +7,7 @@
 	#Range: 0 ~ 1000
 	heartsPerMilestone = 1
 	#A list of numbers of unique foods you need to eat to unlock each milestone, in ascending order. Naturally, adding more milestones lets you earn more hearts.
-	milestones = [5, 12, 20, 32, 45]
+	milestones = [5, 12, 20, 29, 39, 50, 62, 75, 89, 105]
 
 [filtering]
 	#Foods in this list won't affect the player's health nor show up in the food book.
