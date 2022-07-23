@@ -28,7 +28,7 @@
 		"Eating Speed Based Off Food Config" = true
 		#Multiplier for the time taken to eat. Only applied if 'Eating Speed Based Off Food Config' is active.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		"Eating Time Multiplier" = 0.115
+		"Eating Time Multiplier" = 0.1
 		#If true, eating/drinking stops when the player's hit.
 		"Stop consuming on hit" = true
 
@@ -67,7 +67,7 @@
 		"Enable Injured" = true
 		#When eating you'll get healed by this percentage of (hunger + saturation) restored.
 		#Range: 0.0 ~ 128.0
-		"Food Heal Multiplier" = 0.0
+		"Food Heal Multiplier" = 0.15
 
 	#Change food's hunger and saturation given, also makes food heal you by a bit. Changing anything requires a Minecraft restart.
 	[Hunger."Food Hunger"]
@@ -605,7 +605,7 @@
 		"Food Stack Reduction" = true
 		#Used in the 'Food Stack Reduction' formula. Increase this if there are foods that are better than vanilla ones, otherwise they will all stack to 1. Set this to 21.8 if you disable 'Hunger Restore Multiplier'
 		#Range: 1.0 ~ 40.0
-		"Food Quality Divider" = 18.5
+		"Food Quality Divider" = 23.0
 		#All the foods max stack sizes will be multiplied by this value to increase / decrease them (after Food Stack Reduction).
 		#Range: 0.01 ~ 64.0
 		"Food Stack Multiplier" = 0.75
