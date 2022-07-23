@@ -227,7 +227,7 @@
 		"Maximum Bonus Regeneration" = 1.0
 		#How much health will the Ender Dragon regen per difficulty. This is added to the noaml Crystal regeneration.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		"Bonus Regeneration per Difficulty" = 0.02
+		"Bonus Regeneration per Difficulty" = 0.03
 		#How much health (when missing 100% health) will the Ender Dragon regen per difficulty each second whenever she's attached to a Crystal. So if she's missing 30% health, this will be 30% effective. This is added to the normal Crystal regen.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Bonus Crystal Regeneration" = 0.0
