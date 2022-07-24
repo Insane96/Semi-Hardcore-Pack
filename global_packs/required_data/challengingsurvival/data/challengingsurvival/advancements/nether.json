@@ -9,7 +9,7 @@
         "description": {
             "text": "Get into the nether. Gain one life."
         },
-        "frame": "goal",
+        "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false

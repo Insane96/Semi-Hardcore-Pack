@@ -7,7 +7,7 @@
             "text": "Some protection"
         },
         "description": {
-            "text": "More shield types exist. A wooden one reduces damage taken by 1, the vanilla one by 5"
+            "text": "More shield types exist. A wooden one reduces damage taken by 1, the vanilla (iron) one by 5"
         },
         "frame": "task",
         "show_toast": true,
