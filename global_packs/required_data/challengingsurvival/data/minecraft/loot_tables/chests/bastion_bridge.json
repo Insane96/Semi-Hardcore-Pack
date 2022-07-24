@@ -132,14 +132,36 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
+          "name": "tconstruct:tool_handle",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1.0,
-              "add": false
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:rose_gold\"}"
             }
-          ],
-          "name": "minecraft:golden_sword"
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "tconstruct:small_axe_head",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:rose_gold\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "tconstruct:small_blade",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:rose_gold\"}"
+            }
+          ]
         },
         {
           "type": "minecraft:item",
@@ -150,10 +172,11 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{tic_upgrades: [{name: \"tconstruct:golden\", level: 1s}]}"
             }
           ],
-          "name": "minecraft:golden_chestplate"
+          "name": "tconstruct:travelers_chestplate"
         },
         {
           "type": "minecraft:item",
@@ -164,10 +187,11 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{tic_upgrades: [{name: \"tconstruct:golden\", level: 1s}]}"
             }
           ],
-          "name": "minecraft:golden_helmet"
+          "name": "tconstruct:travelers_helmet"
         },
         {
           "type": "minecraft:item",
@@ -178,10 +202,11 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{tic_upgrades: [{name: \"tconstruct:golden\", level: 1s}]}"
             }
           ],
-          "name": "minecraft:golden_leggings"
+          "name": "tconstruct:travelers_leggings"
         },
         {
           "type": "minecraft:item",
@@ -192,24 +217,11 @@
               "add": false
             },
             {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{tic_upgrades: [{name: \"tconstruct:golden\", level: 1s}]}"
             }
           ],
-          "name": "minecraft:golden_boots"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1.0,
-              "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
-            }
-          ],
-          "name": "minecraft:golden_axe"
+          "name": "tconstruct:travelers_boots"
         }
       ]
     },

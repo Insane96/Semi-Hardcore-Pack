@@ -7,46 +7,25 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 15,
+          "weight": 5,
+          "name": "tconstruct:round_plate",
           "functions": [
             {
-              "function": "minecraft:set_damage",
-              "damage": {
-                "type": "minecraft:uniform",
-                "min": 0.15,
-                "max": 0.8
-              },
-              "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:cobalt\"}"
             }
-          ],
-          "name": "minecraft:diamond_shovel"
+          ]
         },
         {
           "type": "minecraft:item",
-          "weight": 12,
+          "weight": 5,
+          "name": "tconstruct:pick_head",
           "functions": [
             {
-              "function": "minecraft:set_damage",
-              "damage": {
-                "type": "minecraft:uniform",
-                "min": 0.15,
-                "max": 0.95
-              },
-              "add": false
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": 1.0,
-              "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:cobalt\"}"
             }
-          ],
-          "name": "minecraft:diamond_pickaxe"
+          ]
         },
         {
           "type": "minecraft:item",
@@ -152,17 +131,14 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 5,
+          "name": "tconstruct:small_axe_head",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": 1.0,
-              "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:rose_gold\"}"
             }
-          ],
-          "name": "minecraft:golden_axe"
+          ]
         },
         {
           "type": "minecraft:item",

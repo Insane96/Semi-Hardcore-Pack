@@ -56,21 +56,13 @@
         {
           "type": "minecraft:item",
           "weight": 6,
+          "name": "tconstruct:small_blade",
           "functions": [
             {
-              "function": "minecraft:set_damage",
-              "damage": {
-                "type": "minecraft:uniform",
-                "min": 0.8,
-                "max": 1.0
-              },
-              "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:cobalt\"}"
             }
-          ],
-          "name": "minecraft:diamond_sword"
+          ]
         },
         {
           "type": "minecraft:item",
@@ -84,12 +76,9 @@
                 "max": 1.0
               },
               "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
             }
           ],
-          "name": "minecraft:diamond_chestplate"
+          "name": "tconstruct:plate_chestplate"
         },
         {
           "type": "minecraft:item",
@@ -103,12 +92,9 @@
                 "max": 1.0
               },
               "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
             }
           ],
-          "name": "minecraft:diamond_helmet"
+          "name": "tconstruct:plate_helmet"
         },
         {
           "type": "minecraft:item",
@@ -122,12 +108,9 @@
                 "max": 1.0
               },
               "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
             }
           ],
-          "name": "minecraft:diamond_leggings"
+          "name": "tconstruct:plate_leggings"
         },
         {
           "type": "minecraft:item",
@@ -141,37 +124,40 @@
                 "max": 1.0
               },
               "add": false
-            },
-            {
-              "function": "minecraft:enchant_randomly"
             }
           ],
-          "name": "minecraft:diamond_boots"
+          "name": "tconstruct:plate_boots"
         },
         {
           "type": "minecraft:item",
           "weight": 6,
-          "name": "minecraft:diamond_sword"
+          "name": "tconstruct:pick_head",
+          "functions": [
+            {
+                "function": "minecraft:set_nbt",
+                "tag": "{Material: \"tconstruct:cobalt\"}"
+            }
+          ]
         },
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:diamond_chestplate"
+          "name": "tconstruct:plate_chestplate"
         },
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:diamond_helmet"
+          "name": "tconstruct:plate_helmet"
         },
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:diamond_boots"
+          "name": "tconstruct:plate_boots"
         },
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:diamond_leggings"
+          "name": "tconstruct:plate_leggings"
         },
         {
           "type": "minecraft:item",
