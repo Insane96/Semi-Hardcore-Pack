@@ -1,7 +1,7 @@
 {
     "type": "tconstruct:incremental_modifier",
     "input": {
-        "tag": "minecraft:tnt"
+        "tag": "minecraft:disabled_for_now"
     },
     "amount_per_item": 1,
     "needed_per_level": 16,
