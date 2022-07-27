@@ -137,7 +137,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_chestplate"
+          "name": "tconstruct:travelers_chestplate"
         },
         {
           "type": "minecraft:item",
