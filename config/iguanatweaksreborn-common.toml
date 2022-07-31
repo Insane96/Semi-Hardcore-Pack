@@ -469,7 +469,7 @@
 		"Tiredness to sleep" = 320.0
 		#Tiredness required to get the Tired effect.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		"Tiredness for effect" = 340.0
+		"Tiredness for effect" = 350.0
 		#Every this Tiredness above 'Tiredness for effect' will add a new level of Tired.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Tiredness per level" = 20.0
