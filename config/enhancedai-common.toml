@@ -44,7 +44,7 @@
 
 		#Entities in here will not have the TargetAI changed
 		[Base.Targeting."Entity Blacklist"]
-			Blacklist = ["minecraft:enderman", "minecraft:piglin", "minecraft:piglin_brute", "progressivebosses:larva"]
+			Blacklist = ["minecraft:enderman", "minecraft:piglin", "minecraft:piglin_brute", "progressivebosses:larva", "progressivebosses:wither_minion"]
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
@@ -134,7 +134,7 @@
 
 		#Entities that shouldn't get the enhanced Shoot AI
 		[Skeleton."Skeleton Shoot"."Entity Blacklist"]
-			Blacklist = ["quark:forgotten"]
+			Blacklist = ["quark:forgotten", "progressivebosses:wither_minion"]
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
@@ -161,7 +161,7 @@
 
 		#Entities that shouldn't get the enhanced Shoot AI
 		[Skeleton."Skeleton Flee"."Entity Blacklist"]
-			Blacklist = ["quark:forgotten"]
+			Blacklist = ["quark:forgotten", "progressivebosses:wither_minion"]
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
@@ -435,10 +435,10 @@
 		"Flee Distance Near" = 8.0
 		#Speed multiplier when the Witch avoids the player and it's farther than 'Flee Distance Near' blocks from him.
 		#Range: 0.0 ~ 4.0
-		"Flee speed Multiplier Far" = 1.25
+		"Flee speed Multiplier Far" = 1.1
 		#Speed multiplier when the Witch avoids the player and it's within 'Flee Distance Near' blocks from him.
 		#Range: 0.0 ~ 4.0
-		"Flee speed Multiplier Near" = 1.5
+		"Flee speed Multiplier Near" = 1.25
 		#Distance from a player that will make the Witch run away.
 		#Range: 0.0 ~ 32.0
 		"Flee Distance Far" = 16.0
