@@ -8,7 +8,7 @@
       "translate": "advancements.story.cure_zombie_villager.title"
     },
     "description": {
-      "translate": "Weaken and then cure a Zombie Villager. Gain one life."
+      "text": "Weaken and then cure a Zombie Villager. Gain one life."
     },
     "frame": "challenge",
     "show_toast": true,

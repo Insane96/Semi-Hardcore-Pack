@@ -1,28 +1,28 @@
 {
     "display": {
         "icon": {
-            "item": "solcarrot:food_book"
+            "item": "woodedtinkerarmor:wooded_chestplate"
         },
         "title": {
-            "text": "Varied Eating"
+            "text": "Some early protection"
         },
         "description": {
-            "text": "Eating different kinds of food will make you get bonus health up to 5 hearts. Check the Food Book for more infos."
+            "text": "Since you don't have access to copper right now, a wood + stone armor would help against mobs"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "challengingsurvival:campfire",
+    "parent": "challengingsurvival:shields",
     "criteria": {
-        "food_book": {
+        "wooded_chestplate": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
                         "items": [
-                            "solcarrot:food_book"
+                            "woodedtinkerarmor:wooded_chestplate"
                         ]
                     }
                 ]
@@ -31,7 +31,7 @@
     },
     "requirements": [
         [
-            "food_book"
+            "wooded_chestplate"
         ]
     ]
 }
