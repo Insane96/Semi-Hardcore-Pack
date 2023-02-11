@@ -1,0 +1,52 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:acacia_boat"
+        },
+        "title": {
+            "text": "Dodging bullets"
+        },
+        "description": {
+            "text": "You can press R to do a roll. There are armor modifiers that enhanced the roll. Check JEI with '@tinkercombatroll'"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "challengingsurvival:root",
+    "criteria": {
+        "has_tinkercombatroll": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "type": "tconstruct:tool",
+                "upgrades": {
+                  "options": [
+                    {
+                      "name": "tinkercombatroll:multi_roll",
+                      "level": 1
+                    },
+                    {
+                      "name": "tinkercombatroll:longfooted",
+                      "level": 1
+                    },
+                    {
+                      "name": "tinkercombatroll:acrobat",
+                      "level": 1
+                    }
+                  ],
+                  "matches_needed": 1
+                }
+              }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "has_tinkercombatroll"
+        ]
+      ]
+}
