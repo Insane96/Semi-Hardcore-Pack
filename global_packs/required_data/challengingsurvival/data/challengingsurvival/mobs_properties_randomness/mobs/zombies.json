@@ -1,0 +1,42 @@
+{
+    "entity_tag": "challengingsurvival:zombies",
+    "presets": {
+        "mode": "after",
+        "apply_all": true,
+        "list": [
+            {
+                "id": "challengingsurvival:zombie/miners",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 7.00
+                    }
+                }
+            },
+            {
+                "id": "challengingsurvival:zombie/fisher",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 6.50
+                    }
+                }
+            },
+            {
+                "id": "challengingsurvival:zombie/pearler",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 6.50
+                    }
+                }
+            }
+        ]
+    }
+}

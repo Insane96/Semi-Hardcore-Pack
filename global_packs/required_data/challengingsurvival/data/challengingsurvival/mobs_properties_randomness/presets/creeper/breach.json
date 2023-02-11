@@ -1,0 +1,10 @@
+{
+    "set_nbt": [
+        {
+            "nbt_tag": "enhancedai:breach",
+            "type": "boolean",
+            "value": 1,
+            "persistent_data": true
+        }
+    ]
+}

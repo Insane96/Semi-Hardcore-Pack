@@ -1,0 +1,13 @@
+{
+    "equipment": {
+        "off_hand": {
+            "override": true,
+            "items": [
+                {
+                    "id": "tconstruct:ender_pearl",
+                    "count": 2
+                }
+            ]
+        }
+    }
+}

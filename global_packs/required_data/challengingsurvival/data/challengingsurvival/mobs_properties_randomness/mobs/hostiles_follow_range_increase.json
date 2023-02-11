@@ -1,0 +1,18 @@
+{
+    "entity_tag": "challengingsurvival:hostiles_follow_range_increase",
+    "attributes": [
+        {
+            "id": "minecraft:generic.follow_range",
+            "modifier_name": "More Sight for Hostiles",
+            "amount": {
+                "value": 0.50,
+                "time_existed_modifier": {
+                    "bonus_percentage": 0.01,
+                    "seconds": 60,
+                    "max_bonus_percentage": 2
+                }
+            },
+            "operation": "multiply_base"
+        }
+    ]
+}

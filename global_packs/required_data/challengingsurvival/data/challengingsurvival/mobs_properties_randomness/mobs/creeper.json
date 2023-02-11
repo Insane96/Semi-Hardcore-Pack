@@ -1,0 +1,64 @@
+{
+    "mob_id": "minecraft:creeper",
+    "presets": {
+        "mode": "after",
+        "apply_all": true,
+        "list": [
+            {
+                "id": "challengingsurvival:creeper/walking_fuse",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 14.00
+                    }
+                }
+            },
+            {
+                "id": "challengingsurvival:creeper/ignore_walls",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 19.00
+                    }
+                }
+            },
+            {
+                "id": "challengingsurvival:creeper/breach",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 14.00
+                    }
+                }
+            },
+            {
+                "id": "challengingsurvival:creeper/launch",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 6.5
+                    }
+                }
+            },
+            {
+                "id": "challengingsurvival:creeper/cena",
+                "chance": {
+                    "value": 0.01,
+                    "time_existed_modifier": {
+                        "bonus_percentage": 0.01,
+                        "seconds": 10,
+                        "max_bonus_percentage": 4.5
+                    }
+                }
+            }
+        ]
+    }
+}

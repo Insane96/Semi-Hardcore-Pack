@@ -1,0 +1,24 @@
+{
+    "mob_id": "minecraft:iron_golem",
+    "potion_effects": [
+        {
+            "id": "minecraft:resistance",
+            "amplifier": 1,
+            "ambient": true
+        }
+    ],
+    "attributes": [
+        {
+            "id": "minecraft:generic.follow_range",
+            "modifier_name": "More Sight for Iron Golems",
+            "amount": 3,
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.movement_speed",
+            "modifier_name": "More Speed for Iron Golems",
+            "amount": 0.25,
+            "operation": "multiply_base"
+        }
+    ]
+}

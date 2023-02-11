@@ -1,0 +1,18 @@
+{
+    "set_nbt": [
+        {
+            "nbt_tag": "enhancedai:shooting_range",
+            "type": "double",
+            "value": {
+                "min": 12,
+                "max": 16,
+                "time_existed_modifier": {
+                    "bonus_percentage": 0.001,
+                    "seconds": 10,
+                    "max_bonus_percentage": 1.00
+                }
+            },
+            "persistent_data": true
+        }
+    ]
+}

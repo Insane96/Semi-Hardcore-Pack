@@ -1,0 +1,27 @@
+{
+    "set_nbt": [
+        {
+            "nbt_tag": "enhancedai:miner",
+            "type": "boolean",
+            "value": 1,
+            "persistent_data": true
+        }
+    ],
+    "equipment": {
+        "off_hand": {
+            "override": true,
+            "items": [
+                {
+                    "id": "tconstruct:pickaxe",
+                    "weight": 1,
+                    "drop_chance": -1,
+                    "ticon_materials": {
+                        "random": {
+                            "max_tier": 1
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

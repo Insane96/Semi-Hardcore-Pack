@@ -1,0 +1,17 @@
+{
+    "entity_tag": "challengingsurvival:animals",
+    "attributes": [
+        {
+            "id": "forge:swim_speed",
+            "modifier_name": "More Swim for Animals",
+            "amount": 1.5,
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.attack_knockback",
+            "modifier_name": "Less knockback for Animals",
+            "amount": -0.2,
+            "operation": "multiply_base"
+        }
+    ]
+}

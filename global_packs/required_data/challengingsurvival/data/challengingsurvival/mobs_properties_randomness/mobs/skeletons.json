@@ -1,0 +1,12 @@
+{
+    "entity_tag": "challengingsurvival:skeletons",
+    "presets": {
+        "mode": "after",
+        "apply_all": true,
+        "list": [
+            {
+                "id": "challengingsurvival:skeleton/shooting_range"
+            }
+        ]
+    }
+}

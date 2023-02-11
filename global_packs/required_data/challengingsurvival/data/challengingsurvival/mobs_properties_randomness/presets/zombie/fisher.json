@@ -1,0 +1,12 @@
+{
+    "equipment": {
+        "off_hand": {
+            "override": true,
+            "items": [
+                {
+                    "id": "tconstruct:fishing_rod"
+                }
+            ]
+        }
+    }
+}
