@@ -2,6 +2,7 @@ downloads/
 logs/
 resourcepacks/
 saves/
+world/
 screenshots/
 options.txt
 realms_persistence.json
@@ -11,3 +12,11 @@ supportercache.json
 usercache.json
 usernamecache.json
 .curseclient
+schematics/
+shaderpacks/
+crash-reports/crash-2023-02-09_19.46.39-fml.txt
+crash-reports/crash-2023-02-09_19.47.14-fml.txt
+crash-reports/crash-2023-02-09_19.48.05-fml.txt
+crash-reports/crash-2023-02-09_19.59.07-fml.txt
+crash-reports/crash-2023-02-11_09.40.37-fml.txt
+crash-reports/crash-2023-02-11_09.42.16-fml.txt
