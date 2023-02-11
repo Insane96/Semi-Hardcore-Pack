@@ -7,11 +7,6 @@
       "attackSpeed": 1.0,
       "attackDamage": 1.0
     },
-    "tconstruct:head": {
-      "durability": 45,
-      "miningSpeed": 1.5,
-      "harvestTier": "minecraft:wood",
-      "attack": 0.0
-    }
+    "tconstruct:head": null
   }
 }
