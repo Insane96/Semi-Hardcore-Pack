@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+      "woodedtinkerarmor:wooded_boots",
+      "woodedtinkerarmor:wooded_leggings",
+      "woodedtinkerarmor:wooded_chestplate",
+      "woodedtinkerarmor:wooded_helmet"
+    ]
+  }

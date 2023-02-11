@@ -1,0 +1,11 @@
+{
+    "type": "tconstruct:flat_embellished_armor",
+    "texture_name": "woodedtinkerarmor:wooded",
+    "default_material": "tconstruct:wood",
+    "dyeable": true,
+    "slot": "leggings",
+    "equip_sound": "item.armor.equip_generic",
+    "stat_provider": "tconstruct:no_parts",
+    "group": "combat",
+    "color_handler": "tconstruct:tool"
+  }

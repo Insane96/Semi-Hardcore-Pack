@@ -1,0 +1,10 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default",
+    "textures": {
+      "tool":   "woodedtinkerarmor:item/tool/wooded_armor/chestplate",
+      "broken": "woodedtinkerarmor:item/tool/wooded_armor/chestplate_broken"
+    },
+    "modifier_roots": [ "woodedtinkerarmor:item/tool/wooded_armor/chestplate_modifiers/" ],
+    "first_modifiers": [ "tconstruct:dyed", "tconstruct:embellishment", "tconstruct:golden" ]
+  }

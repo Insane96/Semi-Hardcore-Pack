@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "c c",
+      "m m"
+    ],
+    "key": {
+      "m": { "tag": "minecraft:logs" },
+      "c": { "tag": "minecraft:stone_tool_materials" }
+    },
+    "result": {
+      "item": "woodedtinkerarmor:wooded_boots"
+    }
+  }

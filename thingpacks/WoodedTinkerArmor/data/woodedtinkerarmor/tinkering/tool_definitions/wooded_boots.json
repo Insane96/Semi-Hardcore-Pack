@@ -1,0 +1,14 @@
+{
+    "stats": {
+      "base": {
+        "tconstruct:durability": 55,
+        "tconstruct:armor": 1,
+        "tconstruct:armor_toughness": 0.25
+      }
+    },
+    "traits": [],
+    "slots": {
+      "upgrades": 2,
+      "defense": 1
+    }
+  }

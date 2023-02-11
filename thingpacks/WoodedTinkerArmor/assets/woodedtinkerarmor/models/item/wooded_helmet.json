@@ -1,0 +1,10 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default",
+    "textures": {
+      "tool":   "woodedtinkerarmor:item/tool/wooded_armor/helmet",
+      "broken": "woodedtinkerarmor:item/tool/wooded_armor/helmet_broken"
+    },
+    "modifier_roots": [ "woodedtinkerarmor:item/tool/wooded_armor/helmet_modifiers/" ],
+    "first_modifiers": [ "tconstruct:dyed", "tconstruct:embellishment", "tconstruct:golden" ]
+  }

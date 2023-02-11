@@ -1,0 +1,10 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default",
+    "textures": {
+      "tool":   "woodedtinkerarmor:item/tool/wooded_armor/leggings",
+      "broken": "woodedtinkerarmor:item/tool/wooded_armor/leggings_broken"
+    },
+    "modifier_roots": [ "woodedtinkerarmor:item/tool/wooded_armor/leggings_modifiers/" ],
+    "first_modifiers": [ "tconstruct:dyed", "tconstruct:embellishment", "tconstruct:golden" ]
+  }

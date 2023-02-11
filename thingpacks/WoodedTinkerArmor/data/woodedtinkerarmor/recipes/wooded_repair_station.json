@@ -1,0 +1,10 @@
+{
+    "type": "tconstruct:specialized_station_repair",
+    "tool": [
+      { "item": "woodedtinkerarmor:wooded_boots" },
+      { "item": "woodedtinkerarmor:wooded_leggings" },
+      { "item": "woodedtinkerarmor:wooded_chestplate" },
+      { "item": "woodedtinkerarmor:wooded_helmet" }
+    ],
+    "repair_material": "tconstruct:wood"
+  }
