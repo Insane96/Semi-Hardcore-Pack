@@ -1,0 +1,36 @@
+{
+  "parent": "challengingsurvival:furnace",
+  "display": {
+    "icon": {
+      "item": "minecraft:lodestone"
+    },
+    "title": {
+      "text": "Never lost again"
+    },
+    "description": {
+      "text": "With some iron and a smeltery you could get a Lodestone and explore without getting lost."
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lodestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lodestone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lodestone"
+    ]
+  ]
+}
