@@ -8,6 +8,8 @@
 "Enable Witch" = true
 "Enable Drowned" = true
 "Enable Ghast" = true
+"Enable Enderman" = true
+"Enable Villager" = true
 
 [Base]
 	#Change how mobs target players
@@ -38,9 +40,9 @@
 		#How far away can the mobs see the player. This overrides the vanilla value (16 for most mobs). Setting 'Max' to 0 will leave the follow range as vanilla. I recommend using mods like Mobs Properties Randomness to have more control over the attribute.
 		[Base.Targeting."Follow Range Override"]
 			#Range: 0.0 ~ 128.0
-			Minimum = 32.0
+			Minimum = 0.0
 			#Range: 0.0 ~ 128.0
-			Maximum = 64.0
+			Maximum = 0.0
 
 		#Entities in here will not have the TargetAI changed
 		[Base.Targeting."Entity Blacklist"]
@@ -51,9 +53,9 @@
 		#How far away can the mobs see the player even through walls. Setting 'Max' to 0 will make mobs not able to see through walls. I recommend using mods like Mobs Properties Randomness to have more control over the attribute; the attribute name is 'enhancedai:generic.xray_follow_range'.
 		[Base.Targeting."XRay Range Override"]
 			#Range: 0.0 ~ 128.0
-			Minimum = 20.0
+			Minimum = 4.0
 			#Range: 0.0 ~ 128.0
-			Maximum = 40.0
+			Maximum = 4.0
 
 	#Prevent players from abusing some game mechanics to stop mobs
 	[Base.Anti-Cheese]
@@ -72,6 +74,12 @@
 
 	#Mobs will run away from exploding creepers / TNT
 	[Base."Avoid Explosions"]
+		#Speed multiplier when the mob runs from explosions and it's within 7 blocks from him.
+		#Range: 0.0 ~ 10.0
+		"Flee speed Multiplier Near" = 1.15
+		#Speed multiplier when the mob runs from explosions and it's farther than 7 blocks from him.
+		#Range: 0.0 ~ 10.0
+		"Flee speed Multiplier Far" = 1.075
 
 		#Entities that shouldn't get the Avoid Explosions AI
 		[Base."Avoid Explosions"."Entity Blacklist"]
@@ -89,23 +97,30 @@
 
 	#Various changes to Creepers exploding. Ignoring Walls, Walking Fuse and smarter exploding based off explosion size
 	[Creeper."Creeper Swell"]
-		#AND HIS NAME IS ...
-		#Range: 0.0 ~ 1.0
-		"Cena Chance" = 0.02
 		#Percentage chance for a Creeper to not stand still while exploding.
 		#Range: 0.0 ~ 1.0
-		"Walking Fuse Chance" = 0.15
+		"Walking Fuse Chance" = 0
 		#Percentage chance for a Creeper to ignore walls while targeting a player. This means that a creeper will be able to explode if it's in the correct range from a player even if there's a wall between.
 		#Range: 0.0 ~ 1.0
-		"Ignore Walls Chance" = 0.2
+		"Ignore Walls Chance" = 0
 		#Breaching creepers will try to open an hole in the wall to let mobs in.
 		#Range: 0.0 ~ 1.0
-		"Breach Chance" = 0.15
+		"Breach Chance" = 0
 		#Launching creepers will try ignite and throw themselves at the player.
 		#Range: 0.0 ~ 1.0
-		"Launch Chance" = 0.075
+		"Launch Chance" = 0
 		#If true creepers will ignite if damaged by an explosion.
 		"TNT Like" = false
+
+		[Creeper."Creeper Swell"."Creeper Cena"]
+			#AND HIS NAME IS ...
+			#Range: 0.0 ~ 1.0
+			"Cena Chance" = 0
+			#If true, Creeper Cena explosion will generate fire
+			"Cena generates fire" = false
+			#Explosion power of Creeper Cena
+			#Range: 0.0 ~ 12.0
+			"Cena explosion power" = 5.0
 
 [Skeleton]
 	#Skeletons are more precise when shooting and strafing is removed, can hit a target from up to 64 blocks and try to stay away from the target.
@@ -123,7 +138,7 @@
 		"Arrow Inaccuracy" = 2.0
 		#Chance for a Skeleton to spawn as a spammer, which spams arrows instead of fully charging the bow
 		#Range: 0.0 ~ 1.0
-		"Spammer chance" = 0.07
+		"Spammer chance" = 0
 
 		#The range from where a skeleton will shoot a player
 		[Skeleton."Skeleton Shoot"."Shooting Range"]
@@ -145,7 +160,7 @@
 		"Avoid Player chance" = 0.5
 		#Chance for a Skeleton to be able to shoot while running from a player
 		#Range: 0.0 ~ 1.0
-		"Attack When Avoiding Chance" = 0.5
+		"Attack When Avoiding Chance" = 0
 		#Distance from a player that will make the skeleton run away.
 		#Range: 0.0 ~ 32.0
 		"Flee Distance" = 16.0
@@ -177,16 +192,16 @@
 	[Zombie."Digger Zombie"]
 		#Chance for a Zombie to spawn with the digger ability
 		#Range: 0.0 ~ 1.0
-		"Digger Chance" = 0.1
+		"Digger Chance" = 0.0
 		#Zombies with Digger AI will mine only if they have any tool in the off-hand
 		"Digger Tool Only" = false
 		#Zombies with Digger AI will mine only if their off-hand tool can mine targeted blocks (e.g. zombies with shovels will not mine stone). Blocks that require no tool (e.g. planks) will be minable regardless of proper tool or not.
 		"Digger Proper Tool Only" = false
 		#Zombies with Digger AI will spawn with a Wooden Pickaxe.
-		"Equip Wooden Pick" = true
+		"Equip Wooden Pick" = false
 		#The maximum Y coordinate at which Zombies can mine.
 		#Range: -128 ~ 512
-		"Max Y Dig" = 64
+		"Max Y Dig" = 512
 		#Multiplier for digger zombies mining speed. E.g. with this set to 2, zombies will take twice the time to mine a block.
 		#Range: 0.0 ~ 128.0
 		"Digger Speed Multiplier" = 2
@@ -212,7 +227,7 @@
 	[Zombie."Pearler Zombie"]
 		#Chance for a Zombie to spawn with an ender pearl in the off hand. I highly recommend using something like Mobs Properties Randomness to have more control over mobs equipment.
 		#Range: 0.0 ~ 1.0
-		"Equip Ender Pearl Chance" = 0.07
+		"Equip Ender Pearl Chance" = 0
 		#How many ender pearls will Zombies spawn with.
 		#Range: 1 ~ 16
 		"Ender Pearl Amount" = 2
@@ -230,7 +245,7 @@
 	[Zombie."Fisher Zombie"]
 		#Chance for a Zombie to spawn with a Fishing Rod in the off hand. I highly recommend using something like Mobs Properties Randomness to have more control over mobs equipment.
 		#Range: 0.0 ~ 1.0
-		"Equip Fishing Rod Chance" = 0.07
+		"Equip Fishing Rod Chance" = 0
 
 		#Entities that shouldn't get the Fisher AI
 		[Zombie."Fisher Zombie"."Entity Blacklist"]
@@ -254,7 +269,7 @@
 		"Destroy Web After" = 100
 		#Damage when the projectiles hits a mob. The damage is set for normal difficulty. Hard difficulty gets +50% damage and Easy gets (-50% + 1) damage.
 		#Range: 0.0 ~ 128.0
-		"Web Damage" = 3.5
+		"Web Damage" = 2
 
 		#Every how many ticks do spiders throw the projectile
 		[Spider."Throwing Web"."Projectile cooldown"]
@@ -278,10 +293,10 @@
 			#Range: 0 ~ 128
 			"Slowness Amplifier" = 2
 			#Should multiple hits on a target with slowness increase the level of Slowness? (This works with any type of slowness)
-			"Stack Slowness Amplifier" = true
+			"Stack Slowness Amplifier" = false
 			#How many max levels of slowness can be applied to the target?
 			#Range: 0 ~ 128
-			"Max Slowness Amplifier" = 6
+			"Max Slowness Amplifier" = 2
 
 		#Entities that shouldn't get the Throwing Web AI
 		[Spider."Throwing Web"."Entity Blacklist"]
@@ -311,11 +326,11 @@
 		"Animals No Longer Flee" = true
 		#Movement speed multiplier when attacking.
 		#Range: 0.0 ~ 4.0
-		"Movement Speed Multiplier" = 1.35
+		"Movement Speed Multiplier" = 1.4
 
 		#Entities that shouldn't be affected by this feature
 		[Animal."Animal Attacking"."Entity Blacklist"]
-			Blacklist = []
+			Blacklist = ["minecraft:llama", "minecraft:trader_llama"]
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
@@ -438,7 +453,7 @@
 		"Flee speed Multiplier Far" = 1.1
 		#Speed multiplier when the Witch avoids the player and it's within 'Flee Distance Near' blocks from him.
 		#Range: 0.0 ~ 4.0
-		"Flee speed Multiplier Near" = 1.25
+		"Flee speed Multiplier Near" = 1.2
 		#Distance from a player that will make the Witch run away.
 		#Range: 0.0 ~ 32.0
 		"Flee Distance Far" = 16.0
@@ -511,6 +526,32 @@
 
 		#Entities that shouldn't get the new Ghast Fireballing AI
 		[Ghast."Ghast Shoot"."Entity Blacklist"]
+			Blacklist = []
+			#If true the list will be treated as a whitelist instead of blacklist
+			"List as Whitelist" = false
+
+[Enderman]
+	#Endermen teleport the player near him when can't reach him for a while.
+	"Enable [Experimental] Get Over Here" = false
+
+	#Endermen teleport the player near him when can't reach him for a while.
+	[Enderman."[Experimental] Get Over Here"]
+		#Chance for a enderman to get the Get Over Here AI
+		#Range: 0.0 ~ 1.0
+		"Get Over Here Chance" = 0.15
+
+[Villager]
+
+	#Make villagers fight back
+	[Villager."Villager Attacking"]
+		#If true, when attacked, villagers will call other villagers for help and attack back. Attack damage can't be changed via config due to limitation so use mods like Mobs Properties Randomness to increase the damage. Base damage is 4.0
+		"Villagers Fight back" = true
+		#Movement speed multiplier when attacking.
+		#Range: 0.0 ~ 4.0
+		"Movement Speed Multiplier" = 0.8
+
+		#Entities that shouldn't be affected by this feature
+		[Villager."Villager Attacking"."Entity Blacklist"]
 			Blacklist = []
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false

@@ -20,17 +20,18 @@
 
 	#Changes to the speed on how food is eaten or how items are consumed.
 	[Hunger."Food Consuming"]
-		#Makes potion faster to drink, 1 second instead of 1.6.
-		"Faster Potion Consuming" = true
-		#Makes milk faster to drink, 1 second instead of 1.6.
-		"Faster Milk Consuming" = true
-		#Makes the speed for eating food based off the hunger and saturation they provide. At 2 (hunger + saturation) the speed is vanilla, higher / lower (hunger + saturation) will lower / raise the speed. Minimum 16 ticks.
-		"Eating Speed Based Off Food Config" = true
 		#Multiplier for the time taken to eat. Only applied if 'Eating Speed Based Off Food Config' is active.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Eating Time Multiplier" = 0.1
 		#If true, eating/drinking stops when the player's hit.
 		"Stop consuming on hit" = true
+		#Makes potions, milk and honey faster to drink, 1 second instead of 1.6.
+		"Faster Drink Consuming" = true
+		#Makes the speed for eating food based off the hunger and saturation they provide. At 2 (hunger + saturation) the speed is vanilla, higher / lower (hunger + saturation) will lower / raise the speed. Minimum 16 ticks.
+		"Eating Speed Based Off Food Restored" = true
+		#The minimum speed a food will take to eat. "Fast Food" items have this value halved. Vanilla time is 32/16
+		#Range: > 0
+		"Eating Time Minimum" = 24
 
 	#Makes Health regen work differently, like in Combat Test snapshots. Can be customized. Also adds Well Fed and Injured effects.
 	[Hunger."Health Regen"]
@@ -61,13 +62,27 @@
 		#If 'Consume Hunger Only' is true then this is the chance to consume an hunger whenever the player is healed (vanilla ignores this; Combat Test has this set to 0.5).
 		#Range: 0.0 ~ 1.0
 		"Hunger Consumption Chance" = 0.0
-		#Set to true to enable Well Fed, a new effect that speeds up health regen and is applied whenever the player eats. The effect speeds up health regen by 25% per level.
-		"Enable Well Fed" = true
-		#Set to true to enable Injured, a new effect that slows down health regen and is applied whenever the player is damaged. The effect slows down health regen by 20% per level.
-		"Enable Injured" = true
 		#When eating you'll get healed by this percentage of (hunger + saturation) restored.
 		#Range: 0.0 ~ 128.0
 		"Food Heal Multiplier" = 0.15
+
+		[Hunger."Health Regen".Effects]
+			#Set to true to enable Well Fed, a new effect that speeds up health regen and is applied whenever the player eats.
+			"Enable Well Fed" = false
+			#Multiplies the base duration of Well Fed by this value. Base duration is 1 second per food effectiveness (hunger + saturation).
+			#Range: 0.0 ~ 128.0
+			"Well Fed Duration Multiplier" = 1.0
+			#How much does health regen Well Fed increases per level. (This is inversely proportional, a value of 0.25 makes makes time to regen lower by 20%. A value of 1.0 makes time to regen lower by 50%.
+			#Range: 0.0 ~ 10.0
+			"Well Fed Effectiveness" = 0.25
+			#Set to true to enable Injured, a new effect that slows down health regen and is applied whenever the player is damaged. The effect slows down health regen by 20% per level.
+			"Enable Injured" = false
+			#Multiplies the base duration of Injured by this value. Base duration is 1 second per point of damage taken.
+			#Range: 0.0 ~ 128.0
+			"Injured Duration Multiplier" = 1.0
+			#How much does health regen Injured decreases per level.
+			#Range: 0.0 ~ 10.0
+			"Injured Effectiveness" = 0.2
 
 	#Change food's hunger and saturation given, also makes food heal you by a bit. Changing anything requires a Minecraft restart.
 	[Hunger."Food Hunger"]
@@ -156,6 +171,16 @@
 		#Can be set to 0 to make Bottle o' enchanting drop no experience
 		#Range: 0 ~ 1024
 		"Bottle o' Enchanting Bonus XP" = 18
+		#Set the cap for repairing items in the anvil (vanilla is 40)
+		#Range: > 1
+		"Anvil Repair Cap" = 2048
+		#Removes cost of renaming items in Anvil
+		"Remove rename cost" = true
+		#Replaces the default Mending enchantment. Mending sets the repair cost of an item to 'Unmending Cap' and will stop it from increasing. No longer repairs items with xp.
+		Unmending = true
+		#Set the cap repair cost set by Unmending
+		#Range: > 1
+		"Unmending Cap" = 20
 
 [Miscellaneous]
 	#Various changes to explosions from knockback to shielding.
@@ -170,8 +195,8 @@
 	"Enable Villager Nerfs" = true
 	#Various Nerfs
 	"Enable Nerfs" = true
-	#Beacon Range varying based of blocks of the pyramid
-	"Enable Beacon" = true
+	#Beacon Range varying based of blocks of the pyramid and better conduit killing mobs
+	"Enable Beacon & Conduit" = true
 
 	#Various changes to explosions from knockback to shielding.
 	[Miscellaneous."Explosion Overhaul"]
@@ -210,7 +235,7 @@
 	[Miscellaneous."Tool Stats"]
 		#A list of items which should have their durability changed.
 		#Format is 'modid:itemid,durability'
-		"Tools Durability" = ["minecraft:wooden_sword,10", "minecraft:wooden_pickaxe,10", "minecraft:wooden_shovel,10", "minecraft:wooden_hoe,10", "minecraft:wooden_axe,10", "minecraft:stone_sword,10", "minecraft:stone_pickaxe,10", "minecraft:stone_shovel,10", "minecraft:stone_hoe,10", "minecraft:stone_axe,10", "minecraft:iron_sword,10", "minecraft:iron_pickaxe,10", "minecraft:iron_shovel,10", "minecraft:iron_hoe,10", "minecraft:iron_axe,10", "minecraft:golden_sword,10", "minecraft:golden_pickaxe,10", "minecraft:golden_shovel,10", "minecraft:golden_hoe,10", "minecraft:golden_axe,10", "minecraft:elytra,1044", "minecraft:diamond_sword,10", "minecraft:diamond_pickaxe,10", "minecraft:diamond_axe,10", "minecraft:diamond_shovel,10", "minecraft:diamond_hoe,10", "minecraft:netherite_sword,10", "minecraft:shears,10", "minecraft:netherite_pickaxe,10", "minecraft:netherite_axe,10", "minecraft:netherite_shovel,10", "minecraft:netherite_hoe,10", "minecraft:elytra,144", "minecraft:shears,1", "minecraft:flint_and_steel,1", "minecraft:leather_helmet,10", "minecraft:leather_chestplate,10", "minecraft:leather_leggings,10", "minecraft:leather_boots,10", "minecraft:chainmail_helmet,10", "minecraft:chainmail_chestplate,10", "minecraft:chainmail_leggings,10", "minecraft:chainmail_boots,10", "minecraft:golden_helmet,10", "minecraft:golden_chestplate,10", "minecraft:golden_leggings,10", "minecraft:golden_boots,10", "minecraft:iron_helmet,10", "minecraft:iron_chestplate,10", "minecraft:iron_leggings,10", "minecraft:iron_boots,10", "minecraft:diamond_helmet,10", "minecraft:diamond_chestplate,10", "minecraft:diamond_leggings,10", "minecraft:diamond_boots,10", "minecraft:netherite_helmet,10", "minecraft:netherite_chestplate,10", "minecraft:netherite_leggings,10", "minecraft:netherite_boots,10", "farmersdelight:flint_knife,10", "farmersdelight:iron_knife,10", "farmersdelight:diamond_knife,10", "farmersdelight:netherite_knife,10", "farmersdelight:golden_knife,10", "fiow:flint_axe,9"]
+		"Tools Durability" = ["minecraft:wooden_sword,33", "minecraft:wooden_pickaxe,33", "minecraft:wooden_shovel,33", "minecraft:wooden_hoe,33", "minecraft:wooden_axe,33", "minecraft:stone_sword,33", "minecraft:stone_pickaxe,33", "minecraft:stone_shovel,33", "minecraft:stone_hoe,33", "minecraft:stone_axe,33", "minecraft:iron_sword,33", "minecraft:iron_pickaxe,33", "minecraft:iron_shovel,33", "minecraft:iron_hoe,33", "minecraft:iron_axe,33", "minecraft:golden_sword,33", "minecraft:golden_pickaxe,33", "minecraft:golden_shovel,33", "minecraft:golden_hoe,33", "minecraft:golden_axe,33", "minecraft:elytra,10", "minecraft:diamond_sword,33", "minecraft:diamond_pickaxe,33", "minecraft:diamond_axe,33", "minecraft:diamond_shovel,33", "minecraft:diamond_hoe,33", "minecraft:netherite_sword,33", "minecraft:shears,33", "minecraft:netherite_pickaxe,33", "minecraft:netherite_axe,33", "minecraft:netherite_shovel,33", "minecraft:netherite_hoe,33", "minecraft:shears,1", "minecraft:flint_and_steel,1", "minecraft:bow,1", "minecraft:crossbow,33", "minecraft:leather_helmet,33", "minecraft:leather_chestplate,33", "minecraft:leather_leggings,33", "minecraft:leather_boots,33", "minecraft:chainmail_helmet,33", "minecraft:chainmail_chestplate,33", "minecraft:chainmail_leggings,33", "minecraft:chainmail_boots,33", "minecraft:golden_helmet,33", "minecraft:golden_chestplate,33", "minecraft:golden_leggings,33", "minecraft:golden_boots,33", "minecraft:iron_helmet,33", "minecraft:iron_chestplate,33", "minecraft:iron_leggings,33", "minecraft:iron_boots,33", "minecraft:diamond_helmet,33", "minecraft:diamond_chestplate,33", "minecraft:diamond_leggings,33", "minecraft:diamond_boots,33", "minecraft:netherite_helmet,33", "minecraft:netherite_chestplate,33", "minecraft:netherite_leggings,33", "minecraft:netherite_boots,33", "farmersdelight:flint_knife,33", "farmersdelight:iron_knife,33", "farmersdelight:diamond_knife,33", "farmersdelight:netherite_knife,33", "farmersdelight:golden_knife,33", "fiow:flint_axe,9"]
 		#A list of items and multipliers that will apply to mining speed when breaking blocks with that item.
 		#Format is 'modid:itemid,efficiency_multiplier'
 		"Tools Efficiency" = ["minecraft:wooden_pickaxe,0", "minecraft:wooden_shovel,0", "minecraft:wooden_hoe,0", "minecraft:wooden_axe,0", "minecraft:stone_pickaxe,0", "minecraft:stone_shovel,0", "minecraft:stone_hoe,0", "minecraft:stone_axe,0", "minecraft:iron_pickaxe,0", "minecraft:iron_shovel,0", "minecraft:iron_hoe,0", "minecraft:iron_axe,0", "minecraft:diamond_pickaxe,0", "minecraft:diamond_shovel,0", "minecraft:diamond_hoe,0", "minecraft:diamond_axe,0", "minecraft:netherite_pickaxe,0", "minecraft:netherite_shovel,0", "minecraft:netherite_hoe,0", "minecraft:netherite_axe,0", "fiow:flint_axe,1"]
@@ -240,11 +265,11 @@
 		#Set here an item that can be used on spawners and let you re-enable them.
 		"Reagent Item" = ""
 
-	#A list of mobs (and optionally dimensions) that shouldn't have their spawner disabled. Each entry has an entity or entity tag and optionally a dimension. E.g. ["minecraft:zombie", "minecraft:blaze,minecraft:the_nether"]
-	[Miscellaneous."Entity Blacklist"]
-		Blacklist = []
-		#If true the list will be treated as a whitelist instead of blacklist
-		"List as Whitelist" = false
+		#A list of mobs (and optionally dimensions) that shouldn't have their spawner disabled. Each entry has an entity or entity tag and optionally a dimension. E.g. ["minecraft:zombie", "minecraft:blaze,minecraft:the_nether"]
+		[Miscellaneous."Temporary Spawners"."Entity Blacklist"]
+			Blacklist = []
+			#If true the list will be treated as a whitelist instead of blacklist
+			"List as Whitelist" = false
 
 	#Small changes to villagers to make them less OP
 	[Miscellaneous."Villager Nerfs"]
@@ -269,8 +294,12 @@
 		#If true, boats will no longer go stupidly fast on ice.
 		"No Ice Boats" = true
 
-	#Beacon Range varying based of blocks of the pyramid
-	[Miscellaneous.Beacon]
+	#Beacon Range varying based of blocks of the pyramid and better conduit killing mobs
+	[Miscellaneous."Beacon & Conduit"]
+		#If true, with the regeneration effect, the Vigour effect is also applied (reduces hunger consumption).
+		"Vigour with Regeneration" = true
+		#If true, pets will also get the beacon effects
+		"Affect Pets" = true
 		#Base range of the beacon
 		#Range: 0.0 ~ 256.0
 		"Base Range" = 10.0
@@ -278,7 +307,9 @@
 		#Each block in the pyramid will increase the range of the beacon. After the blocks have been summed the final value is divided by the number of layers of the beacon.
 		#E.g. a beacon with 1 layer full Iron blocks will give 9 range (+ base range), while with 2 layers (34 range / 2) = 17.
 		#
-		"Blocks Range" = ["minecraft:iron_block,1", "minecraft:emerald_block,1.2", "minecraft:gold_block,1.8", "minecraft:diamond_block,3.0", "minecraft:netherite_block,4.0", "tconstruct:cobalt_block,2.2", "tconstruct:queens_slime_block,3.0", "tconstruct:hepatizon_block,2.7", "tconstruct:manyullyn_block,3.3"]
+		"Blocks Range" = ["minecraft:iron_block,1", "minecraft:emerald_block,1.2", "minecraft:gold_block,1.8", "minecraft:diamond_block,2.5", "minecraft:netherite_block,4.0", "tconstruct:cobalt_block,2.4", "tconstruct:queens_slime_block,3.0", "tconstruct:hepatizon_block,2.7", "tconstruct:manyullyn_block,3.3"]
+		#Increases the range and damage of the conduit
+		"Better Conduit Protection" = true
 
 [Mining]
 	#Change all the blocks hardness
@@ -332,17 +363,15 @@
 	"Enable Stats" = true
 	#Player will deal no knockback if attacking with a non-weapon or spamming
 	"Enable No Knockback" = true
-	#Various changes to Shields
+	#Various changes to Shields. Disabled if Shields+ is installed.
 	"Enable Shields" = true
 
 	#Various changes from weapons damage to armor reduction
 	[Combat.Stats]
 		#If true, Swords and Tridents get -1 damage and Axes get -1.5 damage.
 		"Reduce Weapon Damage" = true
-		#If true, Power Enchantment will be nerfed to deal half damage.
-		"Nerf Power" = false
-		#If true, Arrows from Bows will no longer randomly crit (basically disables the random bonus damage given when firing a fully charged arrow).
-		"Disable Arrow Crits" = true
+		#If true, Arrows from Bows and Crossbows will no longer randomly crit (basically disables the random bonus damage given when firing a fully charged arrow).
+		"Disable Arrow Crits" = false
 		#If true, Arrows from Crossbows will no longer deal random damage, but a set amount of damage (about 9 at a medium distance).
 		"Adjust Crossbow Damage" = true
 		#DISABLE: Disables protection enchantment.
@@ -355,6 +384,9 @@
 		#- slot can be: MAIN_HAND,OFF_HAND,HEAD,CHEST,LEGS,FEET
 		#- operation can be: ADDITION, MULTIPLY_BASE, MULTIPLY_TOTAL
 		"Item Modifiers" = ["minecraft:iron_helmet,HEAD,minecraft:generic.armor_toughness,1.0,ADDITION", "minecraft:iron_chestplate,CHEST,minecraft:generic.armor_toughness,1.0,ADDITION", "minecraft:iron_leggings,LEGS,minecraft:generic.armor_toughness,1.0,ADDITION", "minecraft:iron_boots,FEET,minecraft:generic.armor_toughness,1.0,ADDITION", "minecraft:netherite_helmet,HEAD,minecraft:generic.armor,1,ADDITION", "minecraft:netherite_boots,FEET,minecraft:generic.armor,1,ADDITION"]
+		#Set the power of the Power enchantment (vanilla is 0.5).
+		#Range: 0.0 ~ 10.0
+		"Power Power" = 0.35
 
 	#Player will deal no knockback if attacking with a non-weapon or spamming
 	[Combat."No Knockback"]
@@ -366,7 +398,7 @@
 		#If true the player will deal no knockback when not using a tool / weapon
 		"No Item No Knockback" = true
 
-	#Various changes to Shields
+	#Various changes to Shields. Disabled if Shields+ is installed.
 	[Combat.Shields]
 		#In vanilla when you start blocking with a shield, there's a 0.25 seconds window where you are still not blocking. If true this windup time is removed.
 		"Remove Shield Windup" = true
@@ -400,7 +432,7 @@
 		"Percentage Increase per Toughness" = 0.02
 		#Define here a list of total slowdown percentage (with full armor) per material. This has priority over 'Slowdown per Armor' and 'Percentage Increase per Toughness'. Material's names are the names in the armor's ids. E.g. Gold Armor is 'golden' as the ids are like 'golden_chestplate'.
 		#Format is material,total_slowdown
-		"Material Weight" = ["leather,0.04", "chainmail,0.10", "golden,0.07", "iron,0.13", "diamond,0.18", "netherite,0.25"]
+		"Material Weight" = ["wooded,0.075", "travelers,0.1", "plate,0.15", "laminar,0.15", "slime,0.025", "wooden,1", "chainmail,1", "golden,1", "iron,1", "diamond,1", "netherite,1"]
 		#Define here a list of Enchantments that will reduce the slowdown on the armor piece having the enchantment.
 		#Format is modid:enchantmentid,reductionPerLevel,flatReduction
 		#Where reduction per level is the percentage slowdown reduction per level, while flatReduction (optional) is a flat percentage slowdown reduction. E.g. 'elenaidodge2:lightweight,0.15,0.05' means that you'll get 5% less slowdown on armor plus 15% per level, so at Lightweight II you'll get (5+15*2) = 35% reduction on that piece of armor.
@@ -425,6 +457,8 @@
 		"Material On Slowdown" = ["amethyst,0.1", "bamboo_sapling,0", "bamboo,0.1", "barrier,0", "buildable_glass,0", "cactus,0", "cake,0", "clay,0.15", "cloth_decoration,0", "decoration,0", "dirt,0.1", "egg,0", "explosive,0", "glass,0", "grass,0.1", "heavy_metal,0", "ice_solid,0.5", "ice,0.35", "leaves,0.15", "metal,0", "moss,0.15", "nether_wood,0", "piston,0", "plant,0", "powder_snow,0", "replaceable_fireproof_plant,0", "replaceable_plant,0", "replaceable_water_plant,0", "sand,0.15", "sculk,0", "shulker_shell,0", "snow,0.2", "sponge,0", "stone,0", "top_snow,0", "vegetable,0", "water_plant,0", "web,0", "wood,0", "wool,0.2"]
 		#Slowdown percentage when walking in certain materials. Material names are fixed and cannot be changed. Materials per block list here: https://docs.google.com/spreadsheets/d/1XZ2iTC4nqit_GxvKurRp8NpW3tNaeaZsvfv4EGPoQxw/edit?usp=sharing
 		"Material In Slowdown" = ["amethyst,0.1", "bamboo_sapling,0.15", "bamboo,0", "barrier,0", "buildable_glass,0", "cactus,0", "cake,0", "clay,0", "cloth_decoration,0", "decoration,0", "dirt,0", "egg,0", "explosive,0", "glass,0", "grass,0", "heavy_metal,0", "ice_solid,0", "ice,0", "leaves,0", "metal,0", "moss,0", "nether_wood,0", "piston,0", "plant,0.15", "powder_snow,0", "replaceable_fireproof_plant,0.1", "replaceable_plant,0.1", "replaceable_water_plant,0.1", "sand,0", "sculk,0", "shulker_shell,0", "snow,0", "sponge,0", "stone,0", "top_snow,0.1", "vegetable,0", "water_plant,0.1", "web,0", "wood,0", "wool,0"]
+		#List of blocks and percentage slowdown when on that block/block tag. This overrides slowdown given by Material On Slowdown
+		"Custom Terrain slowdown" = ["minecraft:dirt_path,-0.15", "#minecraft:stone_bricks,0.15"]
 
 	#Player's slowed down when walking backwards.
 	[Movement."Backwards slowdown"]
@@ -435,10 +469,10 @@
 ["Sleep & Respawn"]
 	#Prevents the player from sleeping if has not enough Hunger and gives him effects on wake up
 	"Enable Sleeping Effects" = true
-	#Makes sleeping impossible while begin able to set (or not) the spawn point
-	"Enable Prevent Sleeping" = false
 	#Prevents sleeping if the player is not tired. Tiredness is gained by gaining exhaustion. Allows you to sleep during daytime if too tired
-	"Enable Tiredness" = true
+	"Enable Tiredness" = false
+	#Makes sleeping impossible or possible during day
+	"Enable Sleeping" = true
 
 	#Prevents the player from sleeping if has not enough Hunger and gives him effects on wake up
 	["Sleep & Respawn"."Sleeping Effects"]
@@ -452,11 +486,6 @@
 		#If the player's hunger bar is below 'Hunger Depleted on Wake Up' he can't sleep.
 		"No Sleep If Hungry" = true
 
-	#Makes sleeping impossible while begin able to set (or not) the spawn point
-	["Sleep & Respawn"."Prevent Sleeping"]
-		#If set to true the player spawn point will not change when the player cannot sleep. Has no effect if the player can sleep.
-		"Disable Bed Spawn" = false
-
 	#Prevents sleeping if the player is not tired. Tiredness is gained by gaining exhaustion. Allows you to sleep during daytime if too tired
 	["Sleep & Respawn".Tiredness]
 		#Multiply the tiredness gained by this value. Normally you gain tiredness equal to the exhaustion gained. 'Effective Hunger' doesn't affect the exhaustion gained.
@@ -469,10 +498,24 @@
 		"Tiredness to sleep" = 320.0
 		#Tiredness required to get the Tired effect.
 		#Range: 0.0 ~ 1.7976931348623157E308
-		"Tiredness for effect" = 350.0
+		"Tiredness for effect" = 340.0
 		#Every this Tiredness above 'Tiredness for effect' will add a new level of Tired.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Tiredness per level" = 20.0
+		#A list of items that when consumed will give the Energy Boost effect.
+		#You can specify the item/tag only and the duration will be calculated from the hunger restored or you can include duration,amplifier for customs.
+		#The iguanatweaksreborn:energy_boost item tag can be used to add items without a custom duration
+		#Format is 'modid:item_id' / '#modid:item_tag' or 'modid:item_id,duration,amplifier' / '#modid:item_tag,duration,amplifier'.
+		"Plants Growth Multiplier" = ["#iguanatweaksreborn:energy_boost", "farmersdelight:hot_cocoa,80,0"]
+
+	#Makes sleeping impossible or possible during day
+	["Sleep & Respawn".Sleeping]
+		#If set to true the player will not be able to sleep.
+		"Disable Sleeping" = true
+		#If set to true the player spawn point will not change when the player cannot sleep. Has no effect if the player can sleep.
+		"Disable Bed Spawn" = false
+		#If set to true the player will be able to sleep during day time. On wake up it will be night time
+		"Allow Sleeping During Day" = false
 
 [Farming]
 	#Slower breeding, Growing, Egging and Milking
@@ -568,7 +611,7 @@
 	#Slower Plants (non-crops) growing
 	[Farming."Plants Growth"]
 		#A list of blocks that will take more time to grow and the multiplier that increases the time to grow. Format is 'modid:blockid,multiplier' or '#modid:blocktag,multiplier'.
-		"Plants Growth Multiplier" = ["minecraft:sugar_cane,2.5", "minecraft:cactus,2.5", "minecraft:cocoa,3.0", "minecraft:nether_wart,3.0", "minecraft:chorus_flower,3.0", "#minecraft:saplings,2.5", "minecraft:melon_stem,3.0", "minecraft:pumpkin_stem,3.0", "minecraft:sweet_berry_bush,2.0", "minecraft:kelp,2.5", "minecraft:bamboo,2.5"]
+		"Plants Growth Multiplier" = ["minecraft:sugar_cane,2.5", "minecraft:cactus,2.5", "minecraft:cocoa,4.0", "minecraft:nether_wart,3.0", "minecraft:chorus_flower,3.0", "#minecraft:saplings,2.5", "minecraft:melon_stem,3.0", "minecraft:pumpkin_stem,3.0", "minecraft:sweet_berry_bush,2.0", "minecraft:kelp,2.5", "minecraft:bamboo,2.5"]
 
 	#Slower Hoes and more fragile
 	[Farming."Hoes Nerfs"]
@@ -623,7 +666,7 @@
 		#When true, block stacks are affected by both their material type and the block stack multiplier. If false, block stacks will be affected by the multiplier only.
 		"Block Stack Affected by Material" = true
 
-		#Items or tags that will ignore the stack changes. This can be inverted via 'Blacklist as Whitelist'. Each entry has an item or tag. E.g. ["#minecraft:fishes", "minecraft:stone"].
+		#Items that will ignore the stack changes. This can be inverted via 'Blacklist as Whitelist'. Each entry has an item. E.g. ["minecraft:stone"].
 		["Stack Size"."General Stacking".Blacklist]
 			Blacklist = ["minecraft:rotten_flesh"]
 			#If true the list will be treated as a whitelist instead of blacklist
